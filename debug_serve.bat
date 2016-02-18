@@ -1,0 +1,1 @@
+node ./node_modules/node-static/bin/cli.js -a localhost -p 8082 debug
