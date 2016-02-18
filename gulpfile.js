@@ -42,7 +42,7 @@ var gulp = require('gulp'),
 
 var DEBUG_ROOT = './debug';
 var SRC_ROOT = '.';
-var PROD_ROOT = './prod';
+var PROD_ROOT = './weethr.github.io';
 
 gulp.task('static', function(){
     var files = SRC_ROOT + '/static/**/*';
