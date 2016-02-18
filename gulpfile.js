@@ -36,11 +36,14 @@ var gulp = require('gulp'),
     babelPresetEs2015 = require('babel-preset-es2015'),
     babelPresetReact = require('babel-preset-react'),
     babelPresetStage0 = require('babel-preset-stage-0'),
-    notifier = require('node-notifier');
+    notifier = require('node-notifier'),
+    serve = require('gulp-serve');
 
     packageJson = require('./package.json');
 
 var DEBUG_ROOT = './debug';
+var DEBUG_HOSTNAME = "localhost";
+var DEBUG_PORT = 8082;
 var SRC_ROOT = '.';
 var PROD_ROOT = './weethr.github.io';
 
@@ -266,4 +269,11 @@ gulp.task('debug_styles', ['__debug_styles'], function(){
     var files = SRC_ROOT + '/styles/**.scss';
     return gulp.watch(files, ['__debug_styles'])
 });
-gulp.task('debug', ['debug_static', 'debug_styles', 'debug_scripts_vendor', 'debug_scripts', 'debug_scripts_context']);
+
+gulp.task('debug_serve', serve({
+    root:DEBUG_ROOT,
+    hostname: DEBUG_HOSTNAME,
+    port:DEBUG_PORT,
+}))
+
+gulp.task('debug', ['debug_static', 'debug_styles', 'debug_scripts_vendor', 'debug_scripts', 'debug_scripts_context', 'debug_serve']);
