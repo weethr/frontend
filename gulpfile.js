@@ -40,12 +40,9 @@ var gulp = require('gulp'),
 
     packageJson = require('./package.json');
 
-
 var DEBUG_ROOT = './debug';
 var SRC_ROOT = '.';
-var PROD_ROOT = '..';
-
-
+var PROD_ROOT = './prod';
 
 gulp.task('static', function(){
     var files = SRC_ROOT + '/static/**/*';
