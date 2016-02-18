@@ -51,7 +51,7 @@ gulp.task('static', function(){
 });
 
 gulp.task('scripts_vendor', function(){
-    var bundler = browserify(SRC_ROOT + '/.noop.js', {
+    var bundler = browserify(SRC_ROOT + '/misc/.noop.js', {
         debug: false,
         cache: {},
         packageCache: {},
@@ -141,7 +141,7 @@ gulp.task('debug_static', function(){
 
 
 gulp.task('debug_scripts_vendor',  function(){
-    var bundler = browserify(SRC_ROOT + '/.noop.js', {
+    var bundler = browserify(SRC_ROOT + '/misc/.noop.js', {
         debug: true,
         cache: {},
         packageCache: {},
