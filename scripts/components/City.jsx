@@ -70,11 +70,9 @@ export default React.createClass({
                     <div  className={tempClasses}>
                         { formatTemp(city.weather.temp) }
                     </div>
-                    <div className="city__controls-parent" >
-                        <div  className="city__controls" >
-                            <div className="city__remove-button" rowSpan="2" >
-                                <button onClick={onRemove(city.name)} tabIndex="-1"><i className="icon fa fa-trash-o" aria-hidden="true"></i></button>
-                            </div>
+                    <div className="city__controls" >
+                        <div className="city__remove-button" rowSpan="2" >
+                            <button onClick={onRemove(city.name)} tabIndex="-1"><i className="icon fa fa-trash-o" aria-hidden="true"></i></button>
                         </div>
                     </div>
                 </div>

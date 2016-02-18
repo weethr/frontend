@@ -54,19 +54,12 @@
                         }
                     }
                 }
-
-
             }
 
             &.city--short {
-                #{$this}__controls-parent {
-                    width: initial;
-                }
-
 
                 #{$this}__controls {
-                    justify-content: center;
-                    width: initial;
+                    width: 65px;
                 }
 
                 #{$this}__temp {
@@ -115,7 +108,8 @@
         &__holder {
             display: flex;
             opacity: 1;
-            padding: 0 1rem;
+            width: 40px;
+            padding-right: 10px;
 
             > .icon.fa.fa-sort {
                 font-size: 2rem;

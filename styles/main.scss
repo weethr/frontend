@@ -284,7 +284,7 @@ i.icon {
         &.city--short {
             $font-weight: 2rem;
 
-            padding: 1rem 0;
+            padding: 0.5rem 0;
 
             #{$this}__name {
                 display: flex;
@@ -309,27 +309,15 @@ i.icon {
             }
 
 
-            #{$this}__controls-parent {
+            #{$this}__controls {
                 display: flex;
                 align-items: center;
                 flex-shrink: 0;
-                width: 1px;
-                position: relative;
-                vertical-align: middle;
-            }
-
-            #{$this}__controls {
-                position: relative;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                height: 100%;
-                top: 0;
-                width: 1px;
+                justify-content: center;
+                width: 75px;
             }
 
             #{$this}__remove-button {
-                padding: 0 0.75rem;
                 text-align: center;
             }
 
@@ -397,7 +385,6 @@ i.icon {
         }
     }
 
-
     &__option-list {
         display: none;
         position: absolute;
@@ -436,8 +423,6 @@ i.icon {
         }
     }
 
-
-
     .fa-spinner {
         animation: spin 1000ms infinite linear;
     }
@@ -470,7 +455,7 @@ i.icon {
         justify-content: center;
         cursor: move;
         opacity: 0;
-        padding: 0 1.5rem 0 0.5rem;
+        width: 75px;
     }
     &__body {
         display: flex;
@@ -483,7 +468,7 @@ i.icon {
         cursor: move;
         box-sizing: border-box;
         border-radius: 10px;
-        border-color: rgb(255, 216, 0);
+        border-color: #FFA900;
     }
 
     &:hover, &--dragging  {
@@ -491,7 +476,6 @@ i.icon {
             opacity: 1;
         }
     }
-
 }
 
 
