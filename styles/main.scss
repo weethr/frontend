@@ -281,7 +281,7 @@ i.icon {
 
         }
 
-        &.city--short {
+            &.city--short {
             $font-weight: 2rem;
 
             padding: 0.5rem 0;
@@ -392,6 +392,8 @@ i.icon {
         background: $color_control_bg;
         width: 100%;
         z-index: 1;
+        bottom: 0;
+        transform: translateY(100%);
     }
 
     &__option {
